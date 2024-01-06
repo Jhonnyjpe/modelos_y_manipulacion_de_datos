@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from datetime import datetime, timedelta
 
 # Cargar el dataset
-df = pd.read_excel("C:/Users/jhuamanciza/Desktop/Temporal/modelo_planificacion/dataset/dataset.xlsx")
+df = pd.read_excel("C:/Users/jhuamanciza/Desktop/Temporal/modelo_planificacion/dataset/dataset_muestra.xlsx")
 
 # Convertir la columna "fecha" a formato datetime
 df['fecha'] = pd.to_datetime(df['fecha'])
@@ -22,7 +22,7 @@ df['id_encoded'] = le.fit_transform(df['id'])
 insumos = df['id_encoded'].unique()
 
 # Número de meses para la predicción
-num_meses_prediccion = 12
+num_meses_prediccion = 6
 
 # Lista para almacenar los resultados
 resultados = []
